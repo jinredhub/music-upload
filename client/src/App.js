@@ -50,7 +50,7 @@ class App extends Component {
         console.log('pass data:', data);
 
         database.ref("-LYQMvCCcIhXxVdiPSvW").set({
-            data: data,
+            "data": data,
         });
     }
 
@@ -238,7 +238,6 @@ class App extends Component {
         }
         
        
-
         return (
             <div className="App">
                 <Navbar>

@@ -60,7 +60,7 @@
 
 /* media query */
 
-@media  only screen and  (max-width: 991px){
+@media  only screen and  (max-width: 768px){
     .App .disp-flex{
       flex-wrap: wrap;
     }

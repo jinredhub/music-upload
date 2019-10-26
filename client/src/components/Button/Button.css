@@ -1,0 +1,34 @@
+.Button{
+
+}
+
+.Button .btn{
+    border: none;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.Button .btn-primary{
+    color: white;
+    background-color: #F59D18;
+}
+.Button .btn-primary:hover{
+    background-color: #E8891C;
+}
+.Button .btn-primary:active, .Button .btn-primary:focus, .Button .btn-primary:active:focus, .Button .btn-primary:active:hover{
+    background-color: #d17729;
+}
+
+.Button .btn-danger{
+    color: white;
+    background-color: #ef4545;
+}
+.Button .btn-danger:hover{
+    background-color: #d83636;
+}
+.Button .btn-danger:active, .Button .btn-danger:focus, .Button .btn-danger:active:focus, .Button .btn-danger:active:hover{
+    background-color: #bf2a2a;
+}
+

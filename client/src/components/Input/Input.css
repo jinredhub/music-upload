@@ -1,0 +1,209 @@
+.Input{
+    width: 100%;
+    padding: 5px;
+}
+
+.Input .disp-flex{
+    display: flex;
+}
+.Input .flex-50{
+    flex: 1 1 50%;
+}
+.Input .width100{
+    width: 100%;
+}
+
+.Input .styleLabel{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.Input .inputText{
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: white;
+    padding: 8px 10px;
+    display: block;
+    width: 100%;
+}
+.Input .inputText:focus{
+    border-color: #5f5f5f;
+}
+
+.Input .inputSelect{
+    width: 100%;
+    padding: 8px 10px;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    display: block;
+}
+
+.req::after{
+    content: '*';
+    color: red;
+    padding-left: 5px;
+    font-weight: bold;
+  }
+
+/*custom input file---------------*/
+.Input .inputfile{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.Input .inputfile + label {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: black;
+    background-color: white;
+    display: inline-block;
+    padding: 8px 26px;
+    border: 1px solid #878786;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.Input .inputfile:focus + label,
+.Input .inputfile + label:hover {
+    background-color: #F59D18;
+    color: white;
+}
+
+.Input .inputfile:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+.Input .inputfile + label * {
+    pointer-events: none;
+}
+/*end custom input file--------------*/
+
+/*custom checkbox or radiobutton (square dark-green checkbox)--------------*/
+/* Customize the label (the container) */
+.Input .checkBoxContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    /*font-size: 22px;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.Input .checkBoxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0.1px;
+    width: 0.1px;
+    overflow: hidden;
+    z-index: -1
+}
+
+/* Create a custom checkbox */
+.Input .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #f7f7f7;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.Input .checkBoxContainer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a  background color */
+.Input .checkBoxContainer input:checked ~ .checkmark {
+    background-color: white;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.Input .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.Input .checkBoxContainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.Input .checkBoxContainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #F59D18;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*add outline when navigating with keyboard*/
+.Input .checkBoxContainer input:focus ~ .checkmark {
+    border-color: #5f5f5f;
+    box-shadow: inset 0 1px 1px rgba(0,0,0, .075) ,0 0 8px rgba(107, 107, 107, 0.6);
+}
+/*end custom checkbox or radiobutton (square dark-green checkbox)--------------*/
+
+/*custom radio button----------------------------------------------------*/
+.Input input[type=radio].buttonLikeRadio{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.Input input[type=radio].buttonLikeRadio + label{
+  display:inline-block;
+  margin: 0 -2px;
+  padding: 8px 0px;
+  background-color: white;
+  border: 1px solid #878786;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.Input input[type=radio].buttonLikeRadio:checked + label{
+  background-color:#F59D18;
+  color: white;
+}
+.Input input[type=radio].buttonLikeRadio:hover + label{
+  background-color: #E8891C;
+  color: white;
+}
+.Input input[type=radio].buttonLikeRadio:active + label{
+  background-color: #d17729;
+  color: white;
+}
+.Input input[type=radio].buttonLikeRadio:focus + label{
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+.Input .round-border{
+    border-radius: 5px;
+}
+.Input .round-border:first-child{
+    border-radius: 5px 0 0 5px;
+}
+.Input .round-border:last-child{
+    border-radius: 0 5px 5px 0;
+}
+/*end custom radio button------------------------------------------------*/

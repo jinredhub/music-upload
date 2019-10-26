@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+
+.App .disp-flex{
+    display: flex;
+}
+
+.App .align-items-flex-start{
+    align-items: flex-start;
+}
+
+.App .flex-75{
+    flex: 1 1 75%;
+}
+
+.App .flex-25{
+    flex: 1 1 25%;
+}
+
+.App .listFileContainer{
+    border: 1px solid #b7b7b7;
+    border-radius: 4px;
+    margin-right: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.App .textInputContainer{
+    border: 1px solid #b7b7b7;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+}
+
+.App section{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.App .file-list-item{
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #b7b7b7;
+    cursor: pointer;
+    text-align: center;
+}
+
+.App .file-list-item:last-child{
+    border-bottom: none;
+}
+
+.App .file-list-item:hover{
+    background-color: #d8d8d8;;
+}
+
+.modalContent{
+    padding: 60px 40px;
+}
+
+/* media query */
+
+@media  only screen and  (max-width: 991px){
+    .App .disp-flex{
+      flex-wrap: wrap;
+    }
+
+    .App .flex-75{
+      flex: 1 1 100%;
+    }
+
+    .App .flex-25{
+      flex: 1 1 100%;
+    }
+
+    .App .listFileContainer{
+        margin: 0 20px;
+        max-height: 300px;
+    }
+
+    .App .textInputContainer{
+        margin: 20px;
+    }
+  
+  }
+  
